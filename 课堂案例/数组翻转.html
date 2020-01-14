@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr=[10,20,30,40,50,60] //定义一组数组
+        document.write("反转前"+arr+"<br>");
+        //定义一个指针指向数组里面第一个下标为0的数，和最后一个数(下标=数组长度-1)；
+        // 当start指针小于end指针，都要做比较--做for循环里面的内容
+        //start自增 end自减 直到指针指向同一个数才结束循环
+        for (var start = 0, end = arr.length - 1; start < end;start++,end--){
+            var temp=arr[start];//定义一个变量temp(容器)；把arr[start](下标为0)的值(10)赋到temp里面；
+            arr[start]=arr[end];//再把arr[end](下标为数组长度-1)的值(50) 赋到arr[start]里面去 此时arr[start]的值为50
+            arr[end]=temp;      //最后把temp的值(10)赋到arr[end](下标为数组长度-1)里面 此时
+        }
+        document.write("反转后"+arr+"<br>");
+
+    </script>
+<body>
+
+</body>
+</html>

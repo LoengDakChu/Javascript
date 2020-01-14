@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td{
+            background-color: aqua;
+            border:1px solid black;
+        }
+        td:hover{
+            background-color: coral;
+        }
+    </style>
+    <script>
+        //第一题
+        var sum=0;
+        for(var i=1;i<=100;i++){
+            if(i%3==0 && i%7==0){
+                sum+=i;
+            }
+        }
+        document.write(sum);
+        document.write("<br>");
+
+        //第二题
+
+        for(var x=1;x<=10;x++){
+            for (var a=1;a<=10;a++) {
+                if(a===x||a===(10-x+1)){
+                    document.write("0");
+                }else{
+                    document.write("★");
+                }
+
+            }
+            document.write("<br>");
+
+        }
+
+
+        //第三题
+        document.write("<table>");
+        for(var x=1;x<=9;x++){
+            document.write("<tr>");
+            for(var y=1;y<=x;y++){
+                document.write("<td>");
+                document.write(y+"X"+x+"="+(x*y));
+                document.write("</td>");
+
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+
+        //第五题
+        var sum=0;
+        for(var i=1;i<=100;i++){
+            if(i%1==3 || i%10==3){
+                continue;
+            }
+            sum=sum+i;
+        }
+        document.write(sum);
+
+        //2.2反转数组  第一种写法
+        /*var arr=[10,20,30,40,50];
+        var newarr=[];
+        for (x=arr.length-1;x>=0;x--){
+            newarr[newarr.length]=arr[x];
+
+        }
+        console.log(newarr);*/
+
+        //2.2反转数组  第二种写法
+        /*var arr=[10,20,30,40,50]//定义一组数组
+        document.write("反转前"+arr+"<br>");
+        //定义一个指针指向数组里面第一个下标为0的数，和最后一个数(下标=数组长度-1)；
+        // 当start指针小于end指针，都要做比较--做for循环里面的内容
+        //start自增 end自减 直到指针指向同一个数才结束循环
+        for (var start = 0, end = arr.length - 1; start < end;start++,end--){
+            var temp=arr[start];//定义一个变量temp(容器)；把arr[start](下标为0)的值(10)赋到temp里面；
+            arr[start]=arr[end];//再把arr[end](下标为数组长度-1)的值(50) 赋到arr[start]里面去 此时arr[start]的值为50
+            arr[end]=temp;      //最后把temp的值(10)赋到arr[end](下标为数组长度-1)里面 此时
+        }
+        document.write("反转后"+arr+"<br>");*/
+
+        //2.2反转数组  第三种写法
+        /*var arr=[10,20,30,40,50]
+        document.write("反转前"+arr+"<br>");
+        for(var x=0;x<arr.length/2;x++){
+            var temp=arr[x];
+            arr[x]=arr[arr.length-1-x];
+            arr[arr.length-1-x]=temp;
+
+        }
+        document.write("反转后"+arr);*/
+
+        //2.3数组去重
+        /*var arr=[10,20,10,30,40,50]
+        var newarr=[];
+        for(var x=0;x<arr.length;x++){//遍历老数组
+            var flag=true;//默认不重复
+            for (var y=0;y<newarr.length;y++){//遍历新数组
+                if (arr[x]===newarr[y]){
+                    flag=false;
+                }
+            }
+            if (flag){
+                newarr[newarr.length]=arr[x];
+            }
+        }*/
+        /*//2.4判断是否为对称数组
+        var arr=[1,2,3,2,1];
+        for(var x=0;x<length;x++){
+            for (var y=0;){
+
+            }
+
+        }*/
+
+        //2.5数组的排列
+        var arr=[5,1,2,4,3];
+        for (var x=0;x<arr.length ;x++){
+            for (var y=x+1;y<arr.length;y++){
+                if(arr[x]>arr[y]){
+                    var temp=arr[x];
+                    arr[x]=arr[y];
+                    arr[y]=temp;
+                }
+            }
+        }
+        document.write("排列后："+arr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function f() {
+            var s=[];
+            var max=arguments[0];
+            var min=arguments[0];
+            for (var x=0;x<arguments.length;x++){
+                if(arguments[x]>max){
+                    max=arguments[x];
+                    s[s.length]=max;
+                }
+            }
+            for (var x=0;x<arguments.length;x++){
+                if (arguments[x]<min){
+                    min=arguments[x];
+                    s[s.length]=min;
+                }
+            }
+            document.write("最大值"+max);
+            document.write("最小值"+min);
+            return s;
+
+        }
+        f(1,2,3,4,5)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

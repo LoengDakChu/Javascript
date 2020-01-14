@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //27)	写一个升序的冒泡排序
+        var arr=[1,5,4,2,9];
+        /*for(var x=0;x<arr.length;x++){
+            for (var y=x+1;y<arr.length;y++){
+                if (arr[x]>arr[y]){
+                    var temp=arr[x];
+                    arr[x]=arr[y];
+                    arr[y]=temp;
+                }
+            }
+        }
+        document.write(arr);*/
+
+        function up(b,a) {
+            return b - a;
+        }
+        arr.sort(up);
+        document.write(arr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

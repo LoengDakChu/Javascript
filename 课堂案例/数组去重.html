@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr=[10,20,30,10,40,50];
+        var newarr=[];
+        for (var x=0;x<arr.length;x++){
+            var flag=true;
+            for(var y=0;y<newarr.length;y++){
+                if (arr[x]===newarr[y]){
+                    flag=false;
+                }
+                if (flag) {
+                    newarr[newarr.length]=arr[x];
+                }
+            }
+        }
+        document.write(newarr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

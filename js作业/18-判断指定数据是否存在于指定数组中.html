@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var data="1";
+        var arr=['1','2','3','4','5'];
+        function includes(d,a) {
+            for (var x = 0; x < a.length; x++) {
+                var flag = true;
+                if (a[x] === d) {
+                    flag = false;
+                }
+            }
+            return flag;
+        }
+
+        var b = includes(data,arr);
+        document.write(b)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

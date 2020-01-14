@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr=[1,2,3,4];
+        document.write("刚开始的数"+arr);
+        function newnum() {
+            var newarr=[];
+            for (var x=0;x<arr.length;x++){
+                var num=arr[x]+5;
+                var num1=num%10;
+                newarr[newarr.length]=num1;
+
+
+            }
+            for (var a=0,b=newarr.length-1;a<b;a++,b--){
+                var temp=newarr[a];
+                newarr[a]=newarr[b];
+                newarr[b]=temp;
+            }
+            return newarr;
+        }
+        var s=newnum(arr);
+        document.write("加密后的数"+s);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

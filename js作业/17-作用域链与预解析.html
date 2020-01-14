@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var num = 1;   //1.有var先预解析num
+        function demo(){     //3.最外层函数创建的过程中提升到作用域的最前面
+            console.log(num); //3.作用域的最前面没有给num赋值 所以是undefined
+            function demoSon(){
+                console.log(num);//5.所以输出是2
+                num = 3;
+                console.log(num);//6.就近原则 从下到下 所以这个是3
+            }
+            var num = 2;//4.这个变量在demoSon函数的前面 所以这个num的作用域是在demoSon里面
+            demoSon();
+        }
+        demo();//2.进入函数demo
+    </script>
+</head>
+<body>
+
+</body>
+</html>

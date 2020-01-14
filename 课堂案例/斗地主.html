@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var flower=['♠','♥','♣','♦'];
+        var brand=['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+        //定义一个方法 组合牌
+        function newPk(flower,brand) {
+            var newPk=[];
+            for (var x=0;x<flower.length;x++){
+                for (var y=0;y<brand.length;y++) {
+                    newPk[newPk.length]=flower[x]+brand[y];
+                }
+            }
+            newPk[newPk.length]="🃏";
+            newPk[newPk.length]="🃏";
+            return newPk;
+        }
+
+        var newPk1 = newPk(flower,brand);//组合好的牌//把右边组好的牌赋到左边的变量
+
+            function wash(pk) {
+            for (var x=0;x<pk.length;x++){
+                var number = Math.floor(Math.random()*pk.length);
+                var temp=pk[x];
+                pk[x]=pk[number];
+                pk[number]=temp;
+            }
+            return pk;
+        }
+
+        var zuiHou = wash(newPk1);//洗完后的牌  //把右边洗好的牌赋到左边的变量
+
+        //定义三个玩家以及一个底牌的数组
+        var player1=[];
+        var player2=[];
+        var player3=[];
+        var dp=[];
+
+        for (var x=0;x<zuiHou.length;x++){
+            //什么时候发牌给玩家
+             if (x<zuiHou.length-3){//当x与3取余是等于0 发给第一个玩家
+                    if (x%3===0){
+                        player1[player1.length]=zuiHou[x];
+                    }
+                    else if (x%3===1){//当x与3取余是等于1 发给第二个玩家
+                        player2[player2.length]=zuiHou[x];
+                    }
+                    else if (x%3===2){//当x与3取余是等于2 发给第三个玩家
+                        player3[player3.length]=zuiHou[x];
+                    }
+                }
+                //什么时候发给底牌
+                else{
+                    dp[dp.length]=zuiHou[x];
+                }
+        }
+
+
+        document.write("玩家1："+player1+"<br>");
+        document.write("玩家2："+player2+"<br>");
+        document.write("玩家3："+player3+"<br>");
+        document.write("底牌："+dp);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

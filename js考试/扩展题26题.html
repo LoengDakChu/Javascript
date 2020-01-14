@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //扩展题26题
+        /*
+        1      1小      1对
+        2      1大      1对
+        3      1大1小   2对
+        4      2大1小   3对
+        5      3大2小   5对
+        6      5大3小   8对
+        7      8大5小  13对
+        8      13大8小 21对
+        */
+
+        var months=8;
+        var first1=1;
+        var first2=1;
+        var result=1;
+        for (var x=1;x<=months.length;x++){
+            if (x==1 || x==2){
+                result=1;
+            } else if (x==3){
+                result=2;
+            } else {
+                first2=first1;
+                first1=result;
+                result=first1+first2;
+            }
+            document.write(result+"&nbsp;");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

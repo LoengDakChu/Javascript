@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td{
+            background-color: aquamarine;
+        }
+        td:hover{
+            background-color:coral;
+        }
+    </style>
+    <script>
+        //26)	打印一个带表格的九九乘法表，鼠标移到单元格加背景颜色
+
+        document.write("<table>");
+    for (var x=1;x<=9;x++){
+        document.write("<tr>");
+        for (var y=1;y<=x;y++){
+            document.write("<td>");
+            document.write(y+"X"+x+"="+x*y);
+            document.write("</td>");
+        }
+        document.write("</tr>");
+    }
+        document.write("</table>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

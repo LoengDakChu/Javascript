@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        var money=100;
+        var cun,sum;
+        var qu,yu;
+        var myDate=new Date();
+        var fullYear = myDate.getFullYear();
+        var month = myDate.getMonth()+1;
+        var date = myDate.getDate();
+        while (true) {
+            var num=prompt("请输入你要的操作:\n1.存钱\n2.取钱\n3.显示余额\n4.退出\n5.获取当时时间");
+            if (num == 1) {
+                 cun = +prompt("请输入你要存进的金额：");
+                 sum = money + cun;
+                 money=sum;
+                alert("你的余额是:" + sum);
+            } else if (num == 2) {
+                 qu = +prompt("请输入你要取出的金额：");
+                 yu = money - qu;
+                 money=yu;
+                if (qu>yu){
+                    alert("你输入的数额超过你的余额");
+                }else {
+                    alert("你的余额是:" + yu);
+                }
+            } else if (num == 3) {
+                alert("你的余额为"+yu);
+            }else if (num == 4) {
+                break;
+            }else if(num == 5){
+
+                alert("时间为："+fullYear+"-"+month+"-"+date);
+
+
+
+                /*var time = myDate.getTime();
+                var myDate2=new Date(time);
+                document.write(myDate2);*/
+
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

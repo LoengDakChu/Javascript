@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var str='get-element-by-id';
+        console.log(str);
+        function toCamelCase(str){
+            var arrstr=str.split('');
+            for (var x=1;x<arrstr.length;x++){
+                if (arrstr[x]=='-'){
+                    arrstr.splice(x,1);
+                    if (x<arrstr.length){
+                        arrstr[x]=arrstr[x].toUpperCase();
+                    }
+                }
+            }
+            return arrstr.join('');
+        }
+        var case1= toCamelCase(str);
+        console.log(case1);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

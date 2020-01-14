@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //从大到小排列
+        var arr=[1,4,2,6,5];
+        document.write("原数组为："+arr);
+        for (var x=0;x<arr.length;x++){
+            for (var y=x+1;y<arr.length;y++) {
+                if (arr[x]<arr[y]){
+                    var temp=arr[x];
+                    arr[x]=arr[y];
+                    arr[y]=temp;
+                }
+            }
+        }
+        document.write("从大到小排列："+arr);
+
+        //从小到大排列
+        var arr=[1,4,2,6,5];
+        document.write("原数组为："+arr);
+        for (var x=0;x<arr.length;x++){
+            for (var y=x+1;y<arr.length;y++){
+                if (arr[x]>arr[y]){
+                    var temp=arr[x];
+                    arr[x]=arr[y];
+                    arr[y]=temp;
+                }
+            }
+        }
+        document.write("从小到大排列："+arr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
